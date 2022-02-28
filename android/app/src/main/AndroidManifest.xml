@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.newui">
    <application
-        android:label="newui"
+        android:label="Books"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
