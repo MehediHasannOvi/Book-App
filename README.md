@@ -6,7 +6,7 @@ Create By Flutter .
 
 # [Mehedi Hasan Ovi](https://www.linkedin.com/in/mehediovi/)
 
-<p align="center"><a href="https://mehedihasanovi.xyz"><img width="80%" src="./asstes/Images/uiimage.jpg" /></a></p>
+<p align="center"><a href="https://mehedihasanovi.xyz"><img width="80%" src="./assets/Images/uiimage.jpg" /></a></p>
 
 
 
