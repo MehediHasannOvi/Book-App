@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newui/customtext.dart';
+import 'package:get/get.dart';
+import 'package:newui/page/Nextpage.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -31,7 +33,8 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(50)),
                     ),
                     IconButton(
-                        onPressed: () {}, icon: Icon(Icons.notifications_outlined))
+                        onPressed: () {},
+                        icon: Icon(Icons.notifications_outlined))
                   ],
                 ),
                 SizedBox(
@@ -117,14 +120,38 @@ class _HomepageState extends State<Homepage> {
                   child: Flex(
                     direction: Axis.horizontal,
                     children: [
-                      BookImage(
-                          image: "assets/Images/image2.jpg", text: "Simi book"),
-                      BookImage(
-                          image: "assets/Images/image1.jpg", text: "Robiul book"),
-                      BookImage(
-                          image: "assets/Images/image1.jpg", text: "Akib book"),
-                      BookImage(
-                          image: "assets/Images/image4.jpg", text: "Mahira book"),
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(Nextpage());
+                        },
+                        child: BookImage(
+                            image: "assets/Images/image2.jpg",
+                            text: "Simi book"),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                           Get.to(Nextpage());
+                        },
+                        child: BookImage(
+                            image: "assets/Images/image1.jpg",
+                            text: "Robiul book"),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                           Get.to(Nextpage());
+                        },
+                        child: BookImage(
+                            image: "assets/Images/image1.jpg",
+                            text: "Akib book"),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                           Get.to(Nextpage());
+                        },
+                        child: BookImage(
+                            image: "assets/Images/image4.jpg",
+                            text: "Mahira book"),
+                      ),
                     ],
                   ),
                 ),
@@ -156,11 +183,13 @@ class _HomepageState extends State<Homepage> {
                       Bookimage2(
                           image: "assets/Images/image2.jpg", text: "Simi book"),
                       Bookimage2(
-                          image: "assets/Images/image1.jpg", text: "Robiul book"),
+                          image: "assets/Images/image1.jpg",
+                          text: "Robiul book"),
                       Bookimage2(
                           image: "assets/Images/image1.jpg", text: "Akib book"),
                       Bookimage2(
-                          image: "assets/Images/image4.jpg", text: "Mahira book"),
+                          image: "assets/Images/image4.jpg",
+                          text: "Mahira book"),
                     ],
                   ),
                 ),
