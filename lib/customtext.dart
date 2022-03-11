@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 bodercont(
   final String text,
@@ -67,7 +68,7 @@ class BookImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 20),
-      height: 200.00,
+      height: 210.00,
       width: 150.00,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -94,7 +95,23 @@ class BookImage extends StatelessWidget {
               text: text,
               colors: Colors.black,
               fontsize: 15,
-              fontWeight: FontWeight.bold)
+              fontWeight: FontWeight.bold),
+          RatingBar.builder(
+            initialRating: 3,
+            minRating: 1,
+            direction: Axis.horizontal,
+            allowHalfRating: true,
+            itemCount: 5,
+            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+            itemBuilder: (context, _) => Icon(
+              Icons.star,
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
+            itemSize: 12,
+            onRatingUpdate: (rating) {
+              print(rating);
+            },
+          ),
         ],
       ),
     );

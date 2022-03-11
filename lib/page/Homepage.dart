@@ -11,8 +11,19 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  List imageData = [
+    "assets/Images/image1.jpg",
+    "assets/Images/image2.jpg",
+    "assets/Images/image1.jpg",
+    "assets/Images/image4.jpg"
+  ];
+  List textData = ["Flutter", "Python", "Dart", "Java"];
   @override
   Widget build(BuildContext context) {
+    
+    var getData;
+    final getdata = imageData;
+    final gettext = textData;
     return Scaffold(
       body: ListView(
         children: [
@@ -122,35 +133,41 @@ class _HomepageState extends State<Homepage> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Get.to(Nextpage());
+                          Get.to(Nextpage(
+                            textgetdata: gettext[0],
+                            imagegetdata: getdata[0],
+                          ));
                         },
-                        child: BookImage(
-                            image: "assets/Images/image2.jpg",
-                            text: "Simi book"),
+                        child:
+                            BookImage(image: imageData[0], text: textData[0]),
                       ),
                       GestureDetector(
                         onTap: () {
-                           Get.to(Nextpage());
+                          Get.to(Nextpage( textgetdata: gettext[1],
+                            imagegetdata: getdata[1]));
                         },
-                        child: BookImage(
-                            image: "assets/Images/image1.jpg",
-                            text: "Robiul book"),
+                        child:
+                            BookImage(image: imageData[1], text: textData[1]),
                       ),
                       GestureDetector(
                         onTap: () {
-                           Get.to(Nextpage());
+                          Get.to(Nextpage( textgetdata: gettext[2],
+                            imagegetdata: getdata[2]));
                         },
-                        child: BookImage(
-                            image: "assets/Images/image1.jpg",
-                            text: "Akib book"),
+                        child:
+                            BookImage(
+                              image: imageData[2], text: textData[2]),
                       ),
                       GestureDetector(
                         onTap: () {
-                           Get.to(Nextpage());
+                          
+                          Get.to( 
+                            Nextpage(
+                              textgetdata: gettext[3],
+                              imagegetdata: getdata[4]));
                         },
-                        child: BookImage(
-                            image: "assets/Images/image4.jpg",
-                            text: "Mahira book"),
+                        child:
+                            BookImage(image: imageData[3], text: textData[3]),
                       ),
                     ],
                   ),

@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Nextpage extends StatelessWidget {
-  const Nextpage({Key? key}) : super(key: key);
+  var imagegetdata;
+  var textgetdata;
+  Nextpage({
+    Key? key,
+    required this.textgetdata,
+    required this.imagegetdata,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +49,7 @@ class Nextpage extends StatelessWidget {
               child: Container(
                 height: 250.00,
                 width: 180.00,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
@@ -53,16 +59,15 @@ class Nextpage extends StatelessWidget {
                     )
                   ],
                   image: DecorationImage(
-                      image: AssetImage("assets/Images/image2.jpg"),
-                      fit: BoxFit.fill),
+                      image: AssetImage(imagegetdata), fit: BoxFit.fill),
                 ),
               ),
             ),
             const SizedBox(
               height: 20,
             ),
-            const Text(
-              "Flutter Book ",
+            Text(
+              textgetdata,
               style: const TextStyle(
                   fontSize: 21.00,
                   color: Colors.black,
